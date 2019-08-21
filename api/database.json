@@ -1,24 +1,41 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 2,
-      "title": "json-server",
-      "author": "typicode"
-    }
+  "places": [
+      { 
+      "id": 1, 
+      "name": "Italy", 
+      "visa_required": false,
+      "visited": true
+      },
+      { 
+      "id": 2, 
+      "name": "Switzerland", 
+      "visa_required": true,
+      "visited": false
+      },
+      { 
+      "id": 3, 
+      "name": "France", 
+      "visa_required": false,
+      "visited": false
+      }
   ],
-  "comments": [
-    {
+  "interests": [
+      {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+      "placeId": 1,
+      "name": "Vatican",
+      "description": "Vatican City, a city-state surrounded by Rome, Italy, is the headquarters of the Roman Catholic Church. It's home to the Pope and a trove of iconic art and architecture.",
+      "cost": "100.00",
+      "review": "The food was great"
+      },
+      {
+      "id": 1,
+      "placeId": 3,
+      "name": "The Louvre",
+      "description": "The Louvre, or the Louvre Museum, is the world's largest art museum and a historic monument in Paris, France.",
+      "cost": "",
+      "review": ""
+      }
+          
+  ]
 }
