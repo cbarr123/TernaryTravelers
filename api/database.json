@@ -4,7 +4,7 @@
       "id": 1, 
       "name": "Italy", 
       "visa_required": false,
-      "visited": true
+      "visited": false
       },
       { 
       "id": 2, 

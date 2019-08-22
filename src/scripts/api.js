@@ -1,3 +1,23 @@
+const getInterestData = () => {
+    return fetch("http://localhost:8088/interests")
+    .then(entries => entries.json())
+}
+const saveInterestEntry = (newInterestEntry) => {
+    return fetch("http://localhost:8088/interest",{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newInterestEntry)
+    })
+}
+const deleteInterestEntry = (id) => {
+    return fetch(`http://localhost:8088/interest/${id}`,{
+    method: "DELETE",
+    })
+    .then(response => response.json())
+}
+// ------------------Places-------------------------
 const getPlacesData = () => {
     return fetch("http://localhost:8088/places")
     .then(entries => entries.json())
@@ -34,4 +54,10 @@ const deletePlacesEntry = (id) => {
     method: "DELETE",
     })
     .then(response => response.json())
-  }
+}
+
+
+
+export default {
+    getInterestData, saveInterestEntry, deleteInterestEntry, getPlacesData, savePlacesEntry, retrievePlacesEntry, saveEditedPlacesEntry, deletePlacesEntry
+}
