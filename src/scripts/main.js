@@ -25,7 +25,7 @@ mainContainer.addEventListener("click", () => {
             review: review.value,
         }
         console.log(newInterestEntry)
-    api.saveInterestEntry(newInterestEntry).then(() => {api.getInterestData}).then(dom.renderToDomInterests)
+    api.saveInterestEntry(newInterestEntry).then(dom.renderToDomInterests)
     }
 });
 
@@ -35,12 +35,20 @@ mainContainer.addEventListener("click", () => {
         const pointInterestToDelete = event.target.id.split("--")[1];
         console.log(pointInterestToDelete);
         //* to clear the DOM
-        document.querySelector("#mainContainer").innerHTML = "";
         api.deleteInterestEntry(pointInterestToDelete)
+        document.querySelector("#mainContainer").innerHTML = "";
         api.getInterestData().then(dom.renderToDomInterests)
     }
 })
+//* -----------------Edit in a modal box --------------------------
+mainContainer.addEventListener("click", ()=>{
+    if (event.target.id.startsWith("interestEdit")){
+        const interestPointToEdit = event.target.id.split("--")[1];
+        //-----
+        news.retrieveNewsEntry(newsArticleToEdit)
 
+    }
+})
 
 
 
@@ -50,5 +58,3 @@ mainContainer.addEventListener("click", () => {
 
 
 
-
-//* Be able to edit entries including check boxes

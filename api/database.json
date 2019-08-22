@@ -51,32 +51,39 @@
       "id": 4
     },
     {
-      "name": "newtest",
-      "description": "newtest",
-      "cost": "340",
-      "review": "newtest",
+      "name": "Fooda Restaurant",
+      "description": "A restaurant",
+      "cost": "8.00",
+      "review": "was pretty good",
       "id": 5
     },
     {
-      "name": "trst",
-      "description": "tesst",
-      "cost": "23",
-      "review": "reweq",
+      "name": "tst",
+      "description": "tst",
+      "cost": "12",
+      "review": "tst",
       "id": 6
     },
     {
-      "name": "test",
-      "description": "tester",
-      "cost": "23",
-      "review": "tesrt",
+      "name": "newonw",
+      "description": "newonw",
+      "cost": "12",
+      "review": "newone",
       "id": 7
     },
     {
-      "name": "tesrt",
-      "description": "rezdfs",
-      "cost": "34",
-      "review": "sacasc",
+      "name": "NEW",
+      "description": "NEW",
+      "cost": "14",
+      "review": "NEW",
       "id": 8
+    },
+    {
+      "name": "NewTest",
+      "description": "NewTest",
+      "cost": "12",
+      "review": "NewTest",
+      "id": 9
     }
   ]
 }

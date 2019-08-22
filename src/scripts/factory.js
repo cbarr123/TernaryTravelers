@@ -1,8 +1,9 @@
 const createHomepage = () => {
     return`
     <H1>Mira's Travel Diary</H1>
-    <div class="placesContainer>
-        <section id="newPointInterest>
+    <div id="pointInterestModal"></div>
+    <div class="placesContainer">
+        <section id="newPointInterest">
             <fieldset>
                 Point Of Interest<input name = "pointName" input type = "text" id="pointName">
                 Description<textarea wrap="soft" name="pointDescription" id="pointDescription"></textarea>
@@ -12,7 +13,7 @@ const createHomepage = () => {
                 <button id="pointSubmit" type="submit" value="Record Interest">Submit</button>
             </fieldset>
         </section>
-        <section id="displayPlaces></section>
+        <section id="displayPlaces"></section>
     </div>
     `
 }
@@ -28,6 +29,18 @@ const createPointInterest = (interest) => {
             <button id="interestEdit--${interest.id}">Edit Place of Interest</button>
         </article>`
 }
+
+const modalInterestEdit = () => {
+    return `<dialog id="interestModalBox">
+          <input type="hidden" id="editNewsUserId" value="" />
+          <input name = "editInterestName" type = "text" id="editInterestName">
+          <label for="editInterestName">Title</label>
+          <textarea wrap="soft" name="editInterestDescription" id="editInterestDescription"></textarea>
+          <textarea wrap="soft" name="editInterestReview" id="editInterestReview"></textarea>
+          <input name = "editInterestCost" input type = "text" id="editInterestCost">
+          <button id="editInterestSave" type="submit" value="Record Interest Entry">Save</button>
+      </dialog>`
+  };
 
 
 const createPlace = (place) => {
@@ -48,5 +61,5 @@ const createPlace = (place) => {
 
 
 export default{
-    createHomepage, createPlace, createPointInterest
+    createHomepage, createPlace, createPointInterest, modalInterestEdit
 }
