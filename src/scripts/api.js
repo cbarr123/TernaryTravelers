@@ -3,7 +3,7 @@ const getInterestData = () => {
     .then(entries => entries.json())
 }
 const saveInterestEntry = (newInterestEntry) => {
-    return fetch("http://localhost:8088/interest",{
+    return fetch("http://localhost:8088/interests",{
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -12,7 +12,7 @@ const saveInterestEntry = (newInterestEntry) => {
     })
 }
 const deleteInterestEntry = (id) => {
-    return fetch(`http://localhost:8088/interest/${id}`,{
+    return fetch(`http://localhost:8088/interests/${id}`,{
     method: "DELETE",
     })
     .then(response => response.json())

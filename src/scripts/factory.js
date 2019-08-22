@@ -6,8 +6,10 @@ const createHomepage = () => {
             <fieldset>
                 Point Of Interest<input name = "pointName" input type = "text" id="pointName">
                 Description<textarea wrap="soft" name="pointDescription" id="pointDescription"></textarea>
-                Cost<input name = "pointCost" input type = "text" id="pointCost>
-                <button id="placeSubmit" type="submit">Submit</button>
+                Cost<input name = "pointCost" input type = "text" id="pointCost">
+                review<textarea wrap="soft" name="pointReview" id="pointReview"></textarea>
+                <button type="button" id="interestSubmit">   </button>
+                <button id="pointSubmit" type="submit" value="Record Interest">Submit</button>
             </fieldset>
         </section>
         <section id="displayPlaces></section>
@@ -18,9 +20,10 @@ const createHomepage = () => {
 const createPointInterest = (interest) => {
     return`
         <article class="pointInterest--${interest.id}">
-            <section>${interest.name}</section>
-            <section>${interest.description}</section>
-            <section>URL: ${interest.cost}</section>
+            <section>Name:${interest.name}</section>
+            <section>Description:${interest.description}</section>
+            <section>Cost: ${interest.cost}</section>
+            <section>Review: ${interest.review}</section>
             <button id="interestDelete--${interest.id}">Delete Place of Interest</button>
             <button id="interestEdit--${interest.id}">Edit Place of Interest</button>
         </article>`

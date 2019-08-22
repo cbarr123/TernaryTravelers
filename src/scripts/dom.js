@@ -1,6 +1,6 @@
 import factory from "./factory.js"
 
-const renderToDom = (places) => {
+const renderToDomPlaces = (places) => {
     const whereToDisplayPlacesInTheDom = document.querySelector("#mainContainer");
     places.forEach(place => {
         console.table(place)
@@ -8,10 +8,18 @@ const renderToDom = (places) => {
         whereToDisplayPlacesInTheDom.innerHTML += htmlPlaceRepresentation
     });
 }
-
+const renderToDomInterests = (interests) => {
+    const whereToDisplayPlacesInTheDom = document.querySelector("#mainContainer");
+    interests.forEach(interest => {
+        console.table(interest)
+        const htmlPlaceRepresentation = factory.createPointInterest(interest);
+        whereToDisplayPlacesInTheDom.innerHTML += htmlPlaceRepresentation
+        // console.log(htmlPlaceRepresentation)
+    });
+}
 
 
 
 export default{
-    renderToDom
+    renderToDomPlaces, renderToDomInterests
 }
